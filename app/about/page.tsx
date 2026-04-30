@@ -105,14 +105,13 @@ export default function AboutPage() {
             <div className="space-y-4">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden relative">
                 <Image
-                  src="/images/facility/facility-exterior.jpg"
-                  alt="GSA Traders, Cape Town"
+                  src="/images/facility/team-photo.jpg"
+                  alt="GSA Traders team, Cape Town"
                   fill
                   className="object-cover"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0D1F3C]/70 to-transparent px-5 py-4">
-                  <p className="text-white text-sm font-medium">Cape Town facility</p>
-                  <p className="text-white/60 text-xs">Replace with founders or team photo when available</p>
+                  <p className="text-white text-sm font-medium">The GSA Traders team, Cape Town</p>
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-4">
@@ -171,25 +170,21 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="grid grid-cols-2 gap-4">
-              <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-[#EBF5FB] border border-[#D6EBF7] flex items-center justify-center">
-                {/* Replace with: <Image src="/images/team/franco-asaro.jpg" alt="Franco Asaro" fill className="object-cover" /> */}
-                <div className="text-center text-[#2980B9]/30 p-4">
-                  <div className="w-10 h-10 rounded-full bg-[#D6EBF7] mx-auto mb-2 flex items-center justify-center">
-                    <Users size={18} className="text-[#2980B9]/40" />
-                  </div>
-                  <p className="text-xs font-medium">Franco Asaro</p>
-                  <p className="text-[10px] mt-1 font-mono text-[#2980B9]/25">/images/team/franco.jpg</p>
-                </div>
+              <div className="aspect-[3/4] rounded-2xl overflow-hidden relative">
+                <Image
+                  src="/images/facility/fleet-trucks.jpg"
+                  alt="GSA Traders delivery fleet, Cape Town"
+                  fill
+                  className="object-cover"
+                />
               </div>
-              <div className="mt-10 aspect-[3/4] rounded-2xl overflow-hidden bg-[#EBF5FB] border border-[#D6EBF7] flex items-center justify-center">
-                {/* Replace with: <Image src="/images/team/giovanni-asaro.jpg" alt="Giovanni Asaro" fill className="object-cover" /> */}
-                <div className="text-center text-[#2980B9]/30 p-4">
-                  <div className="w-10 h-10 rounded-full bg-[#D6EBF7] mx-auto mb-2 flex items-center justify-center">
-                    <Users size={18} className="text-[#2980B9]/40" />
-                  </div>
-                  <p className="text-xs font-medium">Giovanni Asaro</p>
-                  <p className="text-[10px] mt-1 font-mono text-[#2980B9]/25">/images/team/giovanni.jpg</p>
-                </div>
+              <div className="mt-10 aspect-[3/4] rounded-2xl overflow-hidden relative">
+                <Image
+                  src="/images/facility/facility-exterior-2.jpg"
+                  alt="GSA Traders facility, Cape Town"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
 

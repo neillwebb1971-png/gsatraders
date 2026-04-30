@@ -301,16 +301,16 @@ export default function HomePage() {
             <div className="grid grid-cols-2 gap-4">
               <div className="aspect-[3/4] rounded-2xl overflow-hidden relative">
                 <Image
-                  src="/images/products/hake-fillet.jpg"
-                  alt="GSA Traders hake fillet"
+                  src="/images/facility/team-photo.jpg"
+                  alt="GSA Traders team, Cape Town"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                 />
               </div>
               <div className="mt-8 aspect-[3/4] rounded-2xl overflow-hidden relative">
                 <Image
-                  src="/images/products/squid-tubes-tentacles.jpg"
-                  alt="GSA Traders squid tubes and tentacles"
+                  src="/images/facility/fleet-trucks.jpg"
+                  alt="GSA Traders delivery fleet, Cape Town"
                   fill
                   className="object-cover"
                 />

@@ -1,10 +1,37 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, ArrowRight, Package } from "lucide-react";
 import CTASection from "@/components/CTASection";
 import { productCategories } from "@/lib/products";
 import { SeafoodIcon } from "@/components/SeafoodIcons";
+
+const categoryImages: Record<string, { src: string; alt: string }[]> = {
+  "white-fish": [
+    { src: "/images/products/hake-fillets-pack.jpg", alt: "GSA Ocean Products hake fillets 500g" },
+    { src: "/images/products/baby-hake-pack.jpg", alt: "GSA Ocean Products baby hake 800g" },
+  ],
+  "cephalopods": [
+    { src: "/images/products/calamari-tubes-pack.jpg", alt: "GSA Ocean Products calamari tubes and tentacles 500g" },
+    { src: "/images/products/octopus-pack.jpg", alt: "GSA Ocean Products octopus 1kg" },
+    { src: "/images/products/calamari-cooked.jpg", alt: "Cooked calamari tubes and tentacles" },
+  ],
+  "crustaceans": [
+    { src: "/images/products/prawn-tails-pack.jpg", alt: "GSA Ocean Products wild Argentinian prawn tails 400g" },
+  ],
+  "large-pelagics": [
+    { src: "/images/products/tuna-steaks-pack.jpg", alt: "GSA Ocean Products tuna steaks 1kg" },
+  ],
+  "other-fish": [
+    { src: "/images/products/braai-snoek-pack.jpg", alt: "GSA Ocean Products braai snoek 700g" },
+    { src: "/images/products/snoek-portions-pack.jpg", alt: "GSA Ocean Products pan fry snoek portions 400g" },
+    { src: "/images/products/john-dory-fillets-pack.jpg", alt: "GSA Ocean Products John Dory fillets 500g" },
+    { src: "/images/products/gurnard-fillets-pack.jpg", alt: "GSA Ocean Products gurnard fillets 500g" },
+    { src: "/images/products/snoek-grilled.jpg", alt: "Grilled snoek with peppers and lemon" },
+    { src: "/images/products/snoek-pan-fried.jpg", alt: "Pan fried snoek portions" },
+  ],
+};
 
 interface PageProps {
   params: Promise<{ category: string }>;
@@ -149,6 +176,24 @@ export default async function CategoryPage({ params }: PageProps) {
           </div>
         </div>
       </section>
+
+      {/* ─── PRODUCT IMAGES ─── */}
+      {categoryImages[category] && (
+        <section className="py-14 bg-white border-t border-[#EBF5FB]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p className="text-xs font-semibold tracking-widest uppercase text-[#2980B9] mb-6">
+              Product examples
+            </p>
+            <div className={`grid gap-4 ${categoryImages[category].length === 1 ? "grid-cols-1 max-w-sm" : categoryImages[category].length === 2 ? "grid-cols-2" : "grid-cols-2 sm:grid-cols-3"}`}>
+              {categoryImages[category].map((img) => (
+                <div key={img.src} className="relative aspect-square rounded-2xl overflow-hidden bg-[#EBF5FB]">
+                  <Image src={img.src} alt={img.alt} fill className="object-cover" sizes="(max-width: 640px) 50vw, 33vw" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ─── MORE CATEGORIES ─── */}
       <section className="py-16 bg-white border-t border-[#EBF5FB]">

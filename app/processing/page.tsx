@@ -48,12 +48,12 @@ const coldChain = [
 ];
 
 const facilityImages = [
-  { src: "/images/facility/facility-exterior.jpg", alt: "GSA Traders facility, Cape Town" },
-  { src: "/images/products/white-fish-fillet.jpg", alt: "Fresh hake fillet, GSA Traders" },
-  { src: "/images/products/hake-on-ice.jpg", alt: "Hake fillets on ice" },
-  { src: "/images/products/monkfish-branded.jpg", alt: "GSA Ocean Products branded monkfish" },
-  { src: "/images/products/squid-tubes-tentacles.jpg", alt: "Squid tubes and tentacles" },
-  { src: "/images/products/octopus-vacuum.jpg", alt: "Vacuum packed octopus tentacles" },
+  { src: "/images/facility/facility-exterior-2.jpg", alt: "GSA Traders facility and delivery fleet, Cape Town" },
+  { src: "/images/facility/fleet-trucks.jpg", alt: "GSA Traders branded delivery fleet" },
+  { src: "/images/facility/team-photo.jpg", alt: "GSA Traders team, Cape Town" },
+  { src: "/images/products/hake-fillets-pack.jpg", alt: "GSA Ocean Products hake fillets 500g" },
+  { src: "/images/products/calamari-tubes-pack.jpg", alt: "GSA Ocean Products calamari tubes and tentacles" },
+  { src: "/images/products/tuna-steaks-pack.jpg", alt: "GSA Ocean Products tuna steaks 1kg" },
 ];
 
 const exportMarkets = [
