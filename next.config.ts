@@ -2,13 +2,15 @@ import type { NextConfig } from "next";
 import path from "path";
 
 const nextConfig: NextConfig = {
-  /**output: "export", */
+  output: "export",
   turbopack: {
     root: path.resolve(__dirname),
   },
   images: {
-    formats: ["image/avif", "image/webp"],
+    unoptimized: true,
+    /** formats: ["image/avif", "image/webp"], */
   },
 };
 
-export default nextConfig;
+/**export default nextConfig; */
+module.exports = nextConfig;
