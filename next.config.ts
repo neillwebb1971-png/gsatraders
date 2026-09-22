@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 import path from "path";
 
 const nextConfig: NextConfig = {
-  output: "export",
+  /** output: "export", */
   turbopack: {
     root: path.resolve(__dirname),
   },
@@ -12,5 +12,5 @@ const nextConfig: NextConfig = {
   },
 };
 
-/**export default nextConfig; */
-module.exports = nextConfig;
+/**module.exports = nextConfig; */
+export default nextConfig;
